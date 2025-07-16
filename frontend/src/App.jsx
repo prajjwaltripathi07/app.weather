@@ -19,7 +19,7 @@ const App = () => {
     setError(null);
     try {
       const response = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`
+        `https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`
       );
       if (!response.ok) throw new Error('City not found');
       const data = await response.json();
